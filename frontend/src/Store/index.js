@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { excerciseSlice } from './excercisereducer'
+import  excerciseSlice  from './excercisereducer'
 
-export const store = configureStore({
+export default configureStore({
   reducer: {
-    exce: excerciseSlice.reducer
+    exce: excerciseSlice
   },
 })

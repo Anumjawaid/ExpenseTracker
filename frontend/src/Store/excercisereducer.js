@@ -39,7 +39,7 @@ export const updateExcercise = createAsyncThunk(
 
     })
 
-export const excerciseSlice = createSlice({
+const excerciseSlice = createSlice({
     name: 'exce',
     initialState,
     reducers: {
@@ -50,3 +50,5 @@ export const excerciseSlice = createSlice({
     }
 });
 
+
+export default excerciseSlice.reducer;
