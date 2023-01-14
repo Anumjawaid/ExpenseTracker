@@ -1,6 +1,7 @@
 # ExpenseTracker
 RR-FP - Sprint 1 - Task 1: Design your App Wireframes (completed by Bushra Fatima)
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/wireframe/Screen-1.PNG)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/wireframe/Screen-2.PNG)
 
 RR-FP - Sprint 1 - Task 2: Implement your Wireframes using Bootstrap 
 Divided into two parts:
