@@ -1,11 +1,16 @@
 import React from "react";
 import Card1 from "./components/Card";
+import {InputFunction,Button} from "./components/helper";
+import FormField  from "./components/Form";
+
 
 const App = () => {
   return (
     <>
-    <h1>hello world</h1>
-    <Card1/>
+
+    
+   <FormField />
+
     </>
   )
 }
