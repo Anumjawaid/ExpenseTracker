@@ -20,4 +20,16 @@ const Card1 = () => {
     )
 }
 
-export default Card1;
+const CardLayout=(props)=>{
+    return(
+        <>
+        
+
+        </>
+    )
+}
+
+export  {Card1};
+
+
+
