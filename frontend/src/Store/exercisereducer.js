@@ -13,7 +13,7 @@ const initialState = {
 }
 
 export const addActivity = createAsyncThunk(
-    "exce/add",
+    "exce/addActivity",
     async (data, thunkApi) => {
         const requestOptions = {
             method: 'POST',
@@ -62,18 +62,18 @@ export const deleteAll = createAsyncThunk(
 
     })
 
-    export const getactivities = createAsyncThunk(
-        "exce/get",
-        async (data, thunkApi) => {
-            const requestOptions = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            };
-            const res = await fetch(`http://localhost:3001/getactivities`, requestOptions)
-            return res.json();
-    
-        })
+export const getactivities = createAsyncThunk(
+    "exce/get",
+    async (data, thunkApi) => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        };
+        const res = await fetch(`http://localhost:3001/getactivities`, requestOptions)
+        return res.json();
+
+    })
 
 const exerciseSlice = createSlice({
     name: 'exce',
@@ -82,8 +82,12 @@ const exerciseSlice = createSlice({
 
     },
     extrareducers: {
-        [addActivity.fulfilled]: (state, action)=>{
+        [addActivity.pending]: () => {
+            console.log('pending');
+        },
+        [addActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message
+            console.log("helo" + action.payload.message);
         },
         [updateActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message
@@ -92,7 +96,7 @@ const exerciseSlice = createSlice({
             state.response = action.payload.message
         },
         [deleteAll.fulfilled]: (state, action) => {
-            state.response = action.payload.messgae
+            state.response = action.payload.message
         },
         [getactivities.fulfilled]: (state, action) => {
             state.exercise = action.payload.data
