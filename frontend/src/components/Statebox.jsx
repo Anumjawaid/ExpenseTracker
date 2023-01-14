@@ -27,7 +27,7 @@ export default function StateBox() {
                     <p>SHARED</p>
                 </Tab>
                 <Tab eventKey="profile" title="Layouts">
-                    <Container style={{background:'black'}}>
+                    <Container style={{backgroundColor:'black'}}>
                         <ActivityCard />
                     </Container>
                 </Tab>

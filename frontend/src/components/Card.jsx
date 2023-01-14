@@ -6,6 +6,8 @@ import './card.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Modal from 'react-bootstrap/Modal';
+import { useState } from 'react'
 
 let styleret = (args) => {
     let style = { border: 'solid 2px #F3904F', width: '40%' }
@@ -23,6 +25,24 @@ let styleret = (args) => {
 }
 
 const ActivityCard = (props) => {
+    const [show, setShow] = useState(false);
+    const[modaldata,setModaldata]=useState({});
+
+    const modalinfo = (which) =>{
+        console.log(which,"props which")
+        
+        
+        setModaldata({
+          header:which.header
+
+        })
+        const handleShow = () => setShow(true);
+
+    }
+
+    const handleClose = () => setShow(false);
+    
+
     let arr = [{ name: 'bisma', description: 'description', activity: "activity", duration: 'duration', time: 'time' }
         , { name: 'aqsa', description: 'description', activity: "activity", duration: 'duration', time: 'time' },
     { name: 'rasheed', description: 'description', activity: "activity", duration: 'duration', time: 'time' }]
@@ -30,44 +50,54 @@ const ActivityCard = (props) => {
     console.log(props.name, "name")
     return (
         <>
-            <Container className='background' style={{backgroundColor:'black !important'}}>
-                <Row style={{backgroundColor:'black !important'}}>
-                    {
-                        arr.map((v, i) => (
-                            <Col xs={6} md={4} key={i}>
-                                <Card style={styleret({ width:'100%', display: 'flex', justifyContent: 'center', alignItems: 'center', border: 'solid 3px purple', backgroundColor: '#C9C8FB' })}>
+            <Row style={{ background: 'transparent' }}>
+                {
+                    arr.map((v, i) => (
+                        <Col xs={6} md={4} key={i}>
+                            <Card style={styleret({ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', border: 'solid 3px purple', backgroundColor: '#C9C8FB' })}>
 
-                                    <span >
+                                <span >
 
-                                        <img src={edit} style={styleret({ padding: '10px', border: '', backgroundColor: '#C9C8FB', width: '50px', marginTop: '15px' })} />
-                                        <img src={remove} style={styleret({ padding: '10px', border: '', width: '50px', marginTop: '15px' })} />
-                                    </span>
-                                    <Card.Body>
-                                        <Card.Title className="text">{v.name}</Card.Title>
-                                        <Card.Text className="text">
-                                            {v.description}
-                                        </Card.Text>
-                                        <Card.Text className="text">{v.activity}</Card.Text>
-                                        <Card.Text className="text">{v.duration}</Card.Text>
-                                        <Card.Text className="text">{v.date}</Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        ))
-                    }
-                </Row>
-            </Container>
+                                    <img src={edit} style={styleret({ padding: '10px', border: '', backgroundColor: '#C9C8FB', width: '50px', marginTop: '15px' })} onClick={()=>modalinfo({header:"update"})} />
+                                    <img src={remove} style={styleret({ padding: '10px', border: '', width: '50px', marginTop: '15px' })} />
+                                </span>
+                                <Card.Body>
+                                    <Card.Title className="text">{v.name}</Card.Title>
+                                    <Card.Text className="text">
+                                        {v.description}
+                                    </Card.Text>
+                                    <Card.Text className="text">{v.activity}</Card.Text>
+                                    <Card.Text className="text">{v.duration}</Card.Text>
+                                    <Card.Text className="text">{v.date}</Card.Text>
+                                </Card.Body>
+                            </Card>
+
+                            <Modal show={show} onHide={handleClose} style={{ backgroundColor: 'transparent' }}>
+                                <Modal.Header closeButton style={{ backgroundColor: 'purple', color: 'white' }}>
+                                    <Modal.Title style={{ backgroundColor: 'transparent', color: 'white' }}>{modaldata.header}</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body style={{ backgroundColor: 'black' }}>
+
+                                </Modal.Body>
+
+                            </Modal>
+                        </Col>
+                    ))
+                }
+            </Row>
+
+
         </>
     )
 }
 
 const CardLayout = (props) => {
- 
+
 
     return (
         <>
             <Container>
-               <ActivityCard/>
+                <ActivityCard />
             </Container>
 
 
