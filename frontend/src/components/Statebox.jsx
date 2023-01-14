@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import '../App.css'
-import { Samp } from './Card'
+import { ActivityCard } from './Card'
 
 export default function StateBox() {
     let subbtn = {
@@ -27,7 +27,9 @@ export default function StateBox() {
                     <p>SHARED</p>
                 </Tab>
                 <Tab eventKey="profile" title="Layouts">
-                    <p>SHARED1</p>
+                    <Container style={{background:'black'}}>
+                        <ActivityCard />
+                    </Container>
                 </Tab>
 
             </Tabs>
