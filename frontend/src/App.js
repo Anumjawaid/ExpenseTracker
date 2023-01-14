@@ -1,11 +1,17 @@
 import React from "react";
-import Card1 from "./components/Card";
+import ActivityCard from "./components/ActivityCard";
 
 const App = () => {
   return (
+
     <>
-    <h1>hello world</h1>
-    <Card1/>
+      <ActivityCard name="Bisma"
+        description="Ran for tes"
+        activity="Running"
+        duration="100 Minutes"
+        date="13th jan 2023" 
+        />
+      
     </>
   )
 }
