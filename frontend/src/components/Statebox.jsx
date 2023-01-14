@@ -5,6 +5,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import '../App.css'
 import { ActivityCard } from './Card'
+import FormField from './Form'
 
 export default function StateBox() {
     let subbtn = {
@@ -24,7 +25,7 @@ export default function StateBox() {
 
             >
                 <Tab eventKey="form" title="Form" className='tabcolor' id='tabchange'>
-                    <p>SHARED</p>
+                    <FormField />
                 </Tab>
                 <Tab eventKey="profile" title="Layouts">
                     <Container style={{backgroundColor:'black'}}>
