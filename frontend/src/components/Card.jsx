@@ -32,14 +32,11 @@ const ActivityCard = (props) => {
         console.log(which,"props which")
         
         
-        setModaldata({
-          header:which.header
-
-        })
-        const handleShow = () => setShow(true);
+        
+        
 
     }
-
+    const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
     
 
@@ -58,7 +55,7 @@ const ActivityCard = (props) => {
 
                                 <span >
 
-                                    <img src={edit} style={styleret({ padding: '10px', border: '', backgroundColor: '#C9C8FB', width: '50px', marginTop: '15px' })} onClick={()=>modalinfo({header:"update"})} />
+                                    <img src={edit} style={styleret({ padding: '10px', border: '', backgroundColor: '#C9C8FB', width: '50px', marginTop: '15px' })} onClick={handleShow} />
                                     <img src={remove} style={styleret({ padding: '10px', border: '', width: '50px', marginTop: '15px' })} />
                                 </span>
                                 <Card.Body>
@@ -74,10 +71,10 @@ const ActivityCard = (props) => {
 
                             <Modal show={show} onHide={handleClose} style={{ backgroundColor: 'transparent' }}>
                                 <Modal.Header closeButton style={{ backgroundColor: 'purple', color: 'white' }}>
-                                    <Modal.Title style={{ backgroundColor: 'transparent', color: 'white' }}>{modaldata.header}</Modal.Title>
+                                    <Modal.Title style={{ backgroundColor: 'transparent', color: 'white' }}>Update</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body style={{ backgroundColor: 'black' }}>
-
+                               
                                 </Modal.Body>
 
                             </Modal>
