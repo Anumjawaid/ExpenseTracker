@@ -1,1 +1,16 @@
 https://anumjawaid990.wixsite.com/fireplancalculator/wireframe
+
+Main Tabs 
+Hover -> #D2ACF7
+Border -> #550E9B
+
+
+Form
+Text Color -> 8C84FA
+track button bg -> 8C84FA
+Track button hover bg ->8015E8
+
+Layout colors
+Card bg -> #C9C8FB
+button bg-> #5F5BCD
+button hover bg -> #4743C5
