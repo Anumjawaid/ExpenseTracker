@@ -45,14 +45,4 @@ const ActivityCard = (props) => {
     )
 }
 
-const CardLayout=(props)=>{
-    return(
-        <>
-        
-        
-
-        </>
-    )
-}
-
-export  {ActivityCard,CardLayout};
+export default ActivityCard;
