@@ -19,3 +19,11 @@ Divided into two parts:
 
 RR-FP - Sprint 2 - Task 4: Migrating to React Components: exercise activity form (completed by Bushra Fatima)
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/frontend/frontenddesign.jpg)
+
+RR-FP - Sprint 2 - Task 5: Migrating to React Components: exercise activities list (completed by Anum Jawaid)
+
+RR-FP - Sprint 2 - Task 6: Implementing the Exercise Activity tracker API with Express (completed by Bisma Rasheed)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutes1.jpg)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutes2.jpg)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutes3.jpg)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutesget.jpg)
