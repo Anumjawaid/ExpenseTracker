@@ -1,3 +1,9 @@
+All project details are described here in this readme.md file. The hosted link of project will be found at the end of this file.
+Project Contributors: 
+1. Bisma Rasheed
+2. Anum Jawaid
+3. Bushra Fatima
+
 # ExpenseTracker
 RR-FP - Sprint 1 - Task 1: Design your App Wireframes (completed by Bushra Fatima)
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/wireframe/Screen-1.PNG)
@@ -21,6 +27,7 @@ RR-FP - Sprint 2 - Task 4: Migrating to React Components: exercise activity form
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/frontend/frontenddesign.jpg)
 
 RR-FP - Sprint 2 - Task 5: Migrating to React Components: exercise activities list (completed by Anum Jawaid)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/activitylistpage.jpg)
 
 RR-FP - Sprint 2 - Task 6: Implementing the Exercise Activity tracker API with Express (completed by Bisma Rasheed)
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutes1.jpg)
@@ -35,3 +42,7 @@ RR-FP - Sprint 2 - Task 7: Connecting with MongoDB database (completed by Bisma 
 RR-FP - Sprint 3 - Task 8: Connecting your Frontend with your Backend (Contributed by all members)
 
 RR-FP - Sprint 3 - Task 9: Deploying and testing your application (Contributed by all members)
+Server deployed on vercel.com 
+Express API Link:
+https://coder-io-exercisetracker.vercel.app
+Frontend Link:
