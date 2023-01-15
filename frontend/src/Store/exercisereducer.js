@@ -18,7 +18,7 @@ export const addActivity = createAsyncThunk("exce/addActivity", async (data, thu
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     };
-    const res = await fetch('http://localhost:3001/addactivity', requestOptions)
+    const res = await fetch('https://coder-io-exercisetracker.vercel.app/addactivity', requestOptions)
     return res.json();
 
 })
@@ -28,7 +28,7 @@ export const updateActivity = createAsyncThunk("exce/update", async (data, thunk
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     };
-    const res = await fetch(`http://localhost:3001/updateactivity`, requestOptions)
+    const res = await fetch(`https://coder-io-exercisetracker.vercel.app/updateactivity`, requestOptions)
     return res.json();
 
 });
@@ -39,7 +39,7 @@ export const deleteActivity = createAsyncThunk("exce/delete", async (data, thunk
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     };
-    const res = await fetch(`http://localhost:3001/deleteactivity`, requestOptions)
+    const res = await fetch(`https://coder-io-exercisetracker.vercel.app/deleteactivity`, requestOptions)
     return res.json();
 
 })
@@ -55,12 +55,8 @@ export const deleteAll = createAsyncThunk("exce/update", async (data, thunkApi) 
 })
 
 export const getactivities = createAsyncThunk("exce/get", async () => {
-    // const requestOptions = {
-    //     method: 'GET',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data)
-    // };
-    const res = await fetch(`http://localhost:3001/getactivities`);
+    
+    const res = await fetch(`https://coder-io-exercisetracker.vercel.app/getactivities`);
     return res.json();
 
 })

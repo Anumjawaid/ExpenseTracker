@@ -6,6 +6,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import '../App.css'
 import { ActivityCard } from './Card'
 import FormField from './Form'
+import {addActivity} from '../Store/exercisereducer'
 
 export default function StateBox() {
     let subbtn = {
@@ -16,22 +17,23 @@ export default function StateBox() {
 
     }
     return (
-        <Container style={{backgroundColor: 'black'}}>
+        <Container >
             <Tabs
                 defaultActiveKey="form"
                 transition={false}
                 id="noanim-tab-example"
                 className="mb-3"
-                style={{backgroundColor: 'black'}}
+                // style={{backgroundColor: 'black'}}
 
             >
                 <Tab eventKey="form" title="Add Activity" className='tabcolor' id='tabchange'>
-                    <FormField/>
+                    <FormField addActivity={addActivity}/>
                 </Tab>
                 <Tab eventKey="profile" title="Track Activities">
-                    <Container>
+                    <Container style={{ backgroundColor: "black", width: "100%" ,marginTop:'20px',marginBottom:'20px'}}>
                         <ActivityCard />
                     </Container>
+                    
                 </Tab>
 
             </Tabs>
