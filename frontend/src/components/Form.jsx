@@ -8,7 +8,6 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
 const FormField = (prop) => {
-  // console.log(prop,"Prop for dispatch")
   const dispatch = useDispatch();
   
   const [exercise, setExercise] = useState({
@@ -32,7 +31,6 @@ const FormField = (prop) => {
   }
 
   const add = () => {
-    // event.preventDefault()
     dispatch(prop.addActivity(exercise));
   }
 
