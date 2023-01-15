@@ -27,3 +27,11 @@ RR-FP - Sprint 2 - Task 6: Implementing the Exercise Activity tracker API with E
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutes2.jpg)
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutes3.jpg)
 ![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/expressroutesget.jpg)
+
+RR-FP - Sprint 2 - Task 7: Connecting with MongoDB database (completed by Bisma Rasheed)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/mongodbconnection.jpg)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/mongoatlas.jpg)
+
+RR-FP - Sprint 3 - Task 8: Connecting your Frontend with your Backend (Contributed by all members)
+
+RR-FP - Sprint 3 - Task 9: Deploying and testing your application (Contributed by all members)
