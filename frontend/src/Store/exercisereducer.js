@@ -43,13 +43,13 @@ export const deleteActivity = createAsyncThunk("exce/delete", async (data, thunk
     return res.json();
 
 })
-export const deleteAll = createAsyncThunk("exce/update", async (data, thunkApi) => {
+export const deleteAll = createAsyncThunk("exce/del", async (data, thunkApi) => {
     const requestOptions = {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     };
-    const res = await fetch(`http://localhost:3001/deleteall`, requestOptions)
+    const res = await fetch(`https://coder-io-exercisetracker.vercel.app/deleteall`, requestOptions)
     return res.json();
 
 })
@@ -66,16 +66,10 @@ const exerciseSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
-        // [addActivity.pending]: () => {
-        //     console.log('pending');
-        // },
         [addActivity.fulfilled]: (state, action) => {
-            console.log('fulfilled')
             state.response = action.payload.message
+            alert(action.payload.message);
         },
-        // [addActivity.rejected]: () => {
-        //     console.log('rejected');
-        // },
         [updateActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message
         },

@@ -2,15 +2,13 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import image from '../Components/images/formimage.png';
+import image from '../components/images/formimage.png';
 import { InputFunction } from './helper';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
 const FormField = (prop) => {
-  // console.log(prop,"Prop for dispatch")
   const dispatch = useDispatch();
-
   
   const [exercise, setExercise] = useState({
     name:'',
@@ -21,8 +19,6 @@ const FormField = (prop) => {
   })
 
   const mapUser = (event) => {
-    console.log("Dd")
-    // event.preventDefault()
     const { name, value } = event.target
     setExercise((data) => {
       return {
@@ -34,7 +30,6 @@ const FormField = (prop) => {
   }
 
   const add = () => {
-    // event.preventDefault()
     dispatch(prop.addActivity(exercise));
   }
 

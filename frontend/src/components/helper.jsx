@@ -1,8 +1,3 @@
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Placeholder from 'react-bootstrap/Placeholder';
-
-
 
 const InputFunction = (props) => {
     console.log(props, "props")
@@ -24,21 +19,15 @@ const InputFunction = (props) => {
     return (
         <>
             <label style={{ color: "#8C84FA", marginBottom: "10px", backgroundColor: 'black' }} > {props.label}  </label><br />
-            <input style={styleret({backgroundColor: 'black'})} name= {props.name} type='text'value={props.value} placeholder={`Enter your ${props.text}`} onChange={(e) => props.onChange(e)}></input><br />
-
-
-
+            <input style={styleret({ backgroundColor: 'black' })} name={props.name} type='text' value={props.value} placeholder={`Enter your ${props.text}`} onChange={(e) => props.onChange(e)}></input><br />
         </>
     )
 }
-
-
 
 function Button(props) {
     return (
         <>
             <button style={{ backgroundColor: "#8C84FA", border: "2px solid #8015E8", margin: "50px", padding: "10px", width: "30%", color: "white", borderRadius: "3px" }}>{props.name}</button>
-
         </>
     )
 }

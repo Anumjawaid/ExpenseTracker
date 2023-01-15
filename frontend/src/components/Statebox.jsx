@@ -1,12 +1,10 @@
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import '../App.css'
 import { ActivityCard } from './Card'
 import FormField from './Form'
-import {addActivity} from '../Store/exercisereducer'
+import { addActivity } from '../Store/exercisereducer'
 
 export default function StateBox() {
     let subbtn = {
@@ -22,23 +20,17 @@ export default function StateBox() {
                 defaultActiveKey="form"
                 transition={false}
                 id="noanim-tab-example"
-                className="mb-3"
-                // style={{backgroundColor: 'black'}}
+                className="mb-3">
 
-            >
                 <Tab eventKey="form" title="Add Activity" className='tabcolor' id='tabchange'>
-                    <FormField addActivity={addActivity}/>
+                    <FormField addActivity={addActivity} />
                 </Tab>
                 <Tab eventKey="profile" title="Track Activities">
-                    <Container style={{ backgroundColor: "black", width: "100%" ,marginTop:'20px',marginBottom:'20px'}}>
+                    <Container style={{ backgroundColor: "black", width: "100%", marginTop: '20px', marginBottom: '20px' }}>
                         <ActivityCard />
                     </Container>
-                    
                 </Tab>
-
             </Tabs>
-
-
         </Container>
     )
 }

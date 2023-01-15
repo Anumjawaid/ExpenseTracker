@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import StateBox from '../Components/Statebox';
+import StateBox from '../components/Statebox';
 export default function AppRouter() {
     return (
         <>
@@ -8,8 +8,7 @@ export default function AppRouter() {
                 <Routes>
                     <Route path='/' element={<StateBox />}></Route>
                 </Routes>
-                </Router>
-               
+            </Router>
         </>
     )
 }
