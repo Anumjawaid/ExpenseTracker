@@ -33,6 +33,8 @@ const ActivityCard = (props) => {
         dispatch(getactivities());
     }, [exercise]);
 
+    }
+    
     const [show, setShow] = useState(false);
 
     const handleShow = () => setShow(true);
@@ -89,18 +91,6 @@ const ActivityCard = (props) => {
             <Row></Row>
         </>
     )
-}
 
-const CardLayout = (props) => {
-
-
-    return (
-        <>
-            <Container>
-                <ActivityCard />
-            </Container>
-        </>
-    )
-}
 
 export { ActivityCard, CardLayout };
