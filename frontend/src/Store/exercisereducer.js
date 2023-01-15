@@ -78,6 +78,7 @@ const exerciseSlice = createSlice({
         // },
         [updateActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message
+            console.log(state.response,"updated")
         },
         [deleteActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message

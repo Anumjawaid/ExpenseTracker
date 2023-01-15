@@ -33,7 +33,7 @@ const ActivityCard = (props) => {
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(getactivities());
-    }, [exercise]);
+    }, []);
     
     const [show, setShow] = useState(false);
     const[modaldata,setModaldata]=useState({});
