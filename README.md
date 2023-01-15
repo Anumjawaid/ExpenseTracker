@@ -46,3 +46,4 @@ Server deployed on vercel.com
 Express API Link:
 https://coder-io-exercisetracker.vercel.app
 Frontend Link:
+https://excercise-trackerbyaj.surge.sh/
