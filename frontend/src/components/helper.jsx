@@ -23,8 +23,8 @@ const InputFunction = (props) => {
 
     return (
         <>
-            <label style={{ color: "#8C84FA", marginBottom: "10px" }} > {props.label}  </label><br />
-            <input style={styleret()} name= {props.name} type='text' placeholder={`Enter your ${props.text}`} onChange={(e) => props.onChange(e)}></input><br />
+            <label style={{ color: "#8C84FA", marginBottom: "10px", backgroundColor: 'black' }} > {props.label}  </label><br />
+            <input style={styleret({backgroundColor: 'black'})} name= {props.name} type='text' placeholder={`Enter your ${props.text}`} onChange={(e) => props.onChange(e)}></input><br />
 
 
 

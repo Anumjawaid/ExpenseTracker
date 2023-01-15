@@ -12,83 +12,74 @@ const initialState = {
     response: ""
 }
 
-export const addActivity = createAsyncThunk(
-    "exce/addActivity",
-    async (data, thunkApi) => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        };
-        const res = await fetch('http://localhost:3001/addactivity', requestOptions)
-        return res.json();
+export const addActivity = createAsyncThunk("exce/addActivity", async (data, thunkApi) => {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    };
+    const res = await fetch('http://localhost:3001/addactivity', requestOptions)
+    return res.json();
 
-    })
-export const updateActivity = createAsyncThunk(
-    "exce/update",
-    async (data, thunkApi) => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        };
-        const res = await fetch(`http://localhost:3001/updateactivity`, requestOptions)
-        return res.json();
+})
+export const updateActivity = createAsyncThunk("exce/update", async (data, thunkApi) => {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    };
+    const res = await fetch(`http://localhost:3001/updateactivity`, requestOptions)
+    return res.json();
 
-    });
+});
 
-export const deleteActivity = createAsyncThunk(
-    "exce/delete",
-    async (data, thunkApi) => {
-        const requestOptions = {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        };
-        const res = await fetch(`http://localhost:3001/deleteactivity`, requestOptions)
-        return res.json();
+export const deleteActivity = createAsyncThunk("exce/delete", async (data, thunkApi) => {
+    const requestOptions = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    };
+    const res = await fetch(`http://localhost:3001/deleteactivity`, requestOptions)
+    return res.json();
 
-    })
-export const deleteAll = createAsyncThunk(
-    "exce/update",
-    async (data, thunkApi) => {
-        const requestOptions = {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        };
-        const res = await fetch(`http://localhost:3001/deleteall`, requestOptions)
-        return res.json();
+})
+export const deleteAll = createAsyncThunk("exce/update", async (data, thunkApi) => {
+    const requestOptions = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    };
+    const res = await fetch(`http://localhost:3001/deleteall`, requestOptions)
+    return res.json();
 
-    })
+})
 
-export const getactivities = createAsyncThunk(
-    "exce/get",
-    async (data, thunkApi) => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        };
-        const res = await fetch(`http://localhost:3001/getactivities`, requestOptions)
-        return res.json();
+export const getactivities = createAsyncThunk("exce/get", async () => {
+    // const requestOptions = {
+    //     method: 'GET',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(data)
+    // };
+    const res = await fetch(`http://localhost:3001/getactivities`);
+    return res.json();
 
-    })
+})
 
 const exerciseSlice = createSlice({
-    name: 'exce',
+    name: 'exercise',
     initialState,
-    reducers: {
-
-    },
-    extrareducers: {
-        [addActivity.pending]: () => {
-            console.log('pending');
-        },
+    reducers: {},
+    extraReducers: {
+        // [addActivity.pending]: () => {
+        //     console.log('pending');
+        // },
         [addActivity.fulfilled]: (state, action) => {
+            console.log('fulfilled')
             state.response = action.payload.message
-            console.log("helo" + action.payload.message);
         },
+        // [addActivity.rejected]: () => {
+        //     console.log('rejected');
+        // },
         [updateActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message
         },
@@ -103,6 +94,5 @@ const exerciseSlice = createSlice({
         }
     }
 });
-
 
 export default exerciseSlice.reducer;

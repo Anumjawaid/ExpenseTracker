@@ -3,6 +3,6 @@ import  exerciseSlice  from './exercisereducer'
 
 export default configureStore({
   reducer: {
-    exce: exerciseSlice
-  },
+    exercise: exerciseSlice
+  }
 })

@@ -16,19 +16,20 @@ export default function StateBox() {
 
     }
     return (
-        <Container>
+        <Container style={{backgroundColor: 'black'}}>
             <Tabs
                 defaultActiveKey="form"
                 transition={false}
                 id="noanim-tab-example"
                 className="mb-3"
+                style={{backgroundColor: 'black'}}
 
             >
-                <Tab eventKey="form" title="Form" className='tabcolor' id='tabchange'>
-                    <FormField />
+                <Tab eventKey="form" title="Add Activity" className='tabcolor' id='tabchange'>
+                    <FormField/>
                 </Tab>
-                <Tab eventKey="profile" title="Layouts">
-                    <Container style={{backgroundColor:'black'}}>
+                <Tab eventKey="profile" title="Track Activities">
+                    <Container>
                         <ActivityCard />
                     </Container>
                 </Tab>

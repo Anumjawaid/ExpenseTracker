@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from 'react-bootstrap/Card';
 import remove from '../images/icons8-remove.png';
 import edit from '../images/icons8-edit1.png';
@@ -7,7 +7,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from 'react'
+import { getactivities } from "../Store/exercisereducer";
 
 let styleret = (args) => {
     let style = { border: 'solid 2px #F3904F', width: '40%' }
@@ -25,15 +27,17 @@ let styleret = (args) => {
 }
 
 const ActivityCard = (props) => {
+    const {exercise} = useSelector((state)=>state.exercise)
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(getactivities());
+    }, []);
+    
     const [show, setShow] = useState(false);
     const[modaldata,setModaldata]=useState({});
 
     const modalinfo = (which) =>{
         console.log(which,"props which")
-        
-        
-        
-        
 
     }
     const handleShow = () => setShow(true);
@@ -43,8 +47,6 @@ const ActivityCard = (props) => {
     let arr = [{ name: 'bisma', description: 'description', activity: "activity", duration: 'duration', time: 'time' }
         , { name: 'aqsa', description: 'description', activity: "activity", duration: 'duration', time: 'time' },
     { name: 'rasheed', description: 'description', activity: "activity", duration: 'duration', time: 'time' }]
-    console.log(props, "props coming from ")
-    console.log(props.name, "name")
     return (
         <>
             <Row style={{ background: 'transparent' }}>
