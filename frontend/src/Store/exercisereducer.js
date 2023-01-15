@@ -12,7 +12,7 @@ const initialState = {
     response: ""
 }
 
-export const addActivity = createAsyncThunk("exce/addActivity", async (data, thunkApi) => {
+export const addActivity = createAsyncThunk("exercise/addActivity", async (data, thunkApi) => {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -22,7 +22,7 @@ export const addActivity = createAsyncThunk("exce/addActivity", async (data, thu
     return res.json();
 
 })
-export const updateActivity = createAsyncThunk("exce/update", async (data, thunkApi) => {
+export const updateActivity = createAsyncThunk("exercise/update", async (data, thunkApi) => {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -33,7 +33,7 @@ export const updateActivity = createAsyncThunk("exce/update", async (data, thunk
 
 });
 
-export const deleteActivity = createAsyncThunk("exce/delete", async (data, thunkApi) => {
+export const deleteActivity = createAsyncThunk("exercise/delete", async (data, thunkApi) => {
     const requestOptions = {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
@@ -43,7 +43,7 @@ export const deleteActivity = createAsyncThunk("exce/delete", async (data, thunk
     return res.json();
 
 })
-export const deleteAll = createAsyncThunk("exce/del", async (data, thunkApi) => {
+export const deleteAll = createAsyncThunk("exercise/del", async (data, thunkApi) => {
     const requestOptions = {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
@@ -54,7 +54,7 @@ export const deleteAll = createAsyncThunk("exce/del", async (data, thunkApi) => 
 
 })
 
-export const getactivities = createAsyncThunk("exce/get", async () => {
+export const getactivities = createAsyncThunk("exercise/get", async () => {
     
     const res = await fetch(`https://coder-io-exercisetracker.vercel.app/getactivities`);
     return res.json();
