@@ -16,3 +16,6 @@ Divided into two parts:
 ![alt text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/HTML-Semantic/htmlsemantic.PNG)
 2. then we apply bootstrap to the designed layout in HTMl. (completed by Bisma Rasheed & Anum Jawaid).
 ![alt text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/HTML-Semantic/bootstraphtml.PNG)
+
+RR-FP - Sprint 2 - Task 4: Migrating to React Components: exercise activity form (completed by Bushra Fatima)
+![alt-text](https://github.com/Anumjawaid/ExpenseTracker/blob/main/frontend/frontenddesign.jpg)
