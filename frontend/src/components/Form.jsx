@@ -38,27 +38,27 @@ const FormField = (prop) => {
     <Container style={{ backgroundColor: "black", width: "100%" }}>
       <Row style={{backgroundColor: 'black'}}>
         <Col style={{ marginLeft: "10%", backgroundColor: 'black' }}><div style={{backgroundColor: 'black'}} className="FormGridChild">
-          <h1 style={{ fontSize: "40px", fontWeight: "bold", color: "White", backgroundColor: 'black' }}>Track your Exercise</h1>
+          <h1 style={{ fontSize: "40px", fontWeight: "bold", color: "White", backgroundColor: 'black',marginTop:'60px' }}>Track your Exercise</h1>
           <p style={{ color: "White", backgroundColor: 'black' }}>We will help you track your exercise</p>
           <InputFunction label="Name" name="name" text="name" value={exercise.name} onChange={mapUser} /><br />
-          <label style={{ color: "#8C84FA", marginBottom: "20px", backgroundColor: 'black' }}>Description</label><br />
-          <textarea style={{ background: "transparent", border: "2px solid #8C84FA", color: "#8C84FA", backgroundColor: 'black' }} placeholder="Enter your description" name='description' value={exercise.description}  onChange={mapUser}></textarea><br />
+          <label style={{ color: "#8C84FA", marginBottom: "20px", backgroundColor: 'black'}}>Description</label><br />
+          <textarea style={{ background: "transparent", border: "2px solid #8C84FA", color: "#8C84FA", backgroundColor: 'black',width:'80%',height:"70px"}} placeholder="Enter your description" name='description' value={exercise.description}  onChange={mapUser}></textarea><br />
           <label style={{ color: "#8C84FA", marginTop: "20px", backgroundColor: 'black' }}>Activity Type</label><br />
-          <select style={{ color: "#8C84FA", marginTop: "20px", width: "35%", background: "transparent", border: "2px solid #8C84FA", backgroundColor: 'black' }} name='activityType' value={exercise.activityType}  onChange={(e) => { mapUser(e) }}><option>Select</option>
+          <select style={{ color: "#8C84FA", marginTop: "20px", width: "35%", background: "transparent", border: "2px solid #8C84FA", backgroundColor: 'black',width:'80%',height:"50px" }} name='activityType' value={exercise.activityType}  onChange={(e) => { mapUser(e) }}><option>Select</option>
             <option style={{backgroundColor: 'black'}} value="Walk">Walk</option>
             <option style={{backgroundColor: 'black'}} value="Run">Run</option>
             <option style={{backgroundColor: 'black'}} value="Swim">Swim</option>
             <option style={{backgroundColor: 'black'}} value="Hike">Hike</option>
             <option style={{backgroundColor: 'black'}} value="BicycleRide">Bicycle Ride</option></select><br />
           <label style={{ color: "#8C84FA", marginTop: "20px", backgroundColor: 'black' }}>Duration</label><br />
-          <input name='duration' onChange={(e) => { mapUser(e) }} type="time" style={{ color: "#8C84FA", marginTop: "20px", width: "35%", background: "black", border: "2px solid #8C84FA",  }} value={exercise.duration} ></input><br />
+          <input name='duration' onChange={(e) => { mapUser(e) }} type="time" style={{ color: "#8C84FA", marginTop: "20px", width: "35%", background: "black", border: "2px solid #8C84FA", width:'80%',height:"50px"}} value={exercise.duration} ></input><br />
           <label style={{ color: "#8C84FA", marginTop: "20px", backgroundColor: 'black' }}>Date</label><br />
-          <input name='date' onChange={(e) => { mapUser(e) }} type="date" style={{ color: "#8C84FA", marginTop: "20px", width: "35%", background: "transparent", border: "2px solid #8C84FA", backgroundColor: 'black' }} value={exercise.date} ></input><br />
+          <input name='date' onChange={(e) => { mapUser(e) }} type="date" style={{ color: "#8C84FA", marginTop: "20px", width: "35%", background: "transparent", border: "2px solid #8C84FA", backgroundColor: 'black',width:'80%',height:"50px" }} value={exercise.date} ></input><br />
 
-          <button style={{ backgroundColor: "#8C84FA", border: "2px solid #8015E8", marginRight: "50px", marginTop: "50px", marginBottom: "50px", padding: "10px", width: "30%", color: "white", borderRadius: "3px", fontWeight: "bold" }} onClick={() => add()}>Track</button>
+          <button style={{ backgroundColor: "#8C84FA", border: "2px solid #8015E8",marginLeft:'100px', marginTop: "50px", marginBottom: "50px", padding: "10px", width: "30%", color: "white", borderRadius: "3px", fontWeight: "bold" }} onClick={() => add()}>Track</button>
 
         </div></Col>
-        <Col style={{backgroundColor: 'black'}}><img style={{backgroundColor: 'black'}} src={image} /></Col>
+        <Col style={{backgroundColor: 'black',marginTop:'120px'}}><img style={{backgroundColor: 'black'}} src={image} /></Col>
       </Row>
 
     </Container>
