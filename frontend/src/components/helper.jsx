@@ -1,6 +1,5 @@
 
 const InputFunction = (props) => {
-    console.log(props, "props")
     let styleret = (args) => {
         let style = { borderBottom: "3px solid #8C84FA", background: "transparent", borderTop: '0px', borderLeft: '0px', borderRight: "0px", width: '40%', color: "#8C84FA", paddingleft: "40px" }
         if (args == undefined) {
