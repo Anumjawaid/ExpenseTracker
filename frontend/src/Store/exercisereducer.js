@@ -9,7 +9,8 @@ const initialState = {
         activityType: "",
         _id: ""
     }],
-    response: ""
+    response: "",
+    respup:""
 }
 
 export const addActivity = createAsyncThunk("exercise/addActivity", async (data, thunkApi) => {
@@ -72,13 +73,15 @@ const exerciseSlice = createSlice({
         },
         [updateActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message
-            console.log(state.response,"updated")
+            alert(action.payload.message);
         },
         [deleteActivity.fulfilled]: (state, action) => {
             state.response = action.payload.message
+            alert(action.payload.message);
         },
         [deleteAll.fulfilled]: (state, action) => {
             state.response = action.payload.message
+            alert(action.payload.message);
         },
         [getactivities.fulfilled]: (state, action) => {
             state.exercise = action.payload.data

@@ -32,17 +32,15 @@ let styleret = (args) => {
 const ActivityCard = (props) => {
     let objpass = useRef()
     const { exercise } = useSelector((state) => state.exercise)
+    
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getactivities());
     }, [exercise]);
 
     const [show, setShow] = useState(false);
-    //  console.log(exercise,"exc")
     const handleShow = (v) => {
-        // console.log(v,"v")
         objpass.current = v
-        // console.log(objpass,"v")
         setShow(true)
     };
     const handleClose = () => setShow(false);
@@ -83,7 +81,7 @@ const ActivityCard = (props) => {
                                         </Card.Body>
                                     </Card>
 
-                                    <Modal show={show} onHide={handleClose} fullscreen={true} style={{ backgroundColor: 'transparent' }}>
+                                    <Modal show={show} onHide={handleClose} fullscreen={true} style={{ backgroundColor: 'transparent' }} key={v._id}>
                                         <Modal.Header closeButton style={{ backgroundColor: 'purple', color: 'white' }}>
                                             <Modal.Title style={{ backgroundColor: 'transparent', color: 'white' }}>Update</Modal.Title>
                                         </Modal.Header>
@@ -100,14 +98,18 @@ const ActivityCard = (props) => {
                     </Row>
                 </>
                 :
-                <Row className="justify-content-md-center">
-                    <Col style={{ backgroundColor: "black", margin: '0 auto', color: 'white' }}>
-                        <h2 style={{ backgroundColor: "black", margin: '0 auto' }}>No Items At the Moment</h2>
-                        <img src={empty} style={styleret({ padding: '10px', border: '', backgroundColor: 'transparent', width: '50%', marginTop: '15px' })} />
-
+                <>
+                <Row>
+                    <Col xs={12} style={{ backgroundColor: "black", color: 'white' }}>
+                        <div style={{ backgroundColor: "black", alignItems:'center',alignContent:'center',display:'flex',flexDirection:'column', color: 'white' }}>
+                        <h2 style={{ backgroundColor: "black", margin: '' }}>No Exercise At the Moment</h2>
+                        <img src={empty} style={styleret({ padding: '10px', border: '', backgroundColor: 'transparent', width: '30%', marginTop: '15px' })} />
+                        </div>
 
                     </Col>
+
                 </Row>
+                </>
             }
 
         </>
