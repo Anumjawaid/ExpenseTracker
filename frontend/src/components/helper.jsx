@@ -17,8 +17,8 @@ const InputFunction = (props) => {
 
     return (
         <>
-            <label style={{ color: "#8C84FA", marginBottom: "10px", backgroundColor: 'black' }} > {props.label}  </label><br />
-            <input style={styleret({ backgroundColor: 'black' ,width:'80%'})} name={props.name} type='text' value={props.value} placeholder={`Enter your ${props.text}`} onChange={(e) => props.onChange(e)}></input><br />
+            <label style={{ color: "#8C84FA", marginBottom: "10px", backgroundColor: 'black',fontSize:'20px' }} > {props.label}  </label><br />
+            <input style={styleret({ backgroundColor: 'black' ,width:'90%'})} name={props.name} type='text' value={props.value} placeholder={`Enter your ${props.text}`} onChange={(e) => props.onChange(e)}></input><br />
         </>
     )
 }
@@ -26,7 +26,7 @@ const InputFunction = (props) => {
 function Button(props) {
     return (
         <>
-            <button style={{ backgroundColor: "#8C84FA", border: "2px solid #8015E8", margin: "50px", padding: "10px", width: "30%", color: "white", borderRadius: "3px" }}>{props.name}</button>
+            <button style={{ backgroundColor: "#8C84FA", border: "2px solid #8015E8", margin: "50px", padding: "10px", width: "30%", color: "white", borderRadius: "3px",fontWeight: "bold" ,fontSize:'20px',letterSpacing: "0.7px" }}>{props.name}</button>
         </>
     )
 }
