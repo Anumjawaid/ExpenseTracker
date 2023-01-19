@@ -34,3 +34,8 @@ ul.mb-3.nav.nav-tabs {
 li.nav-item {
   width: 40rem;
 }
+@media (min-width: 280px) and (max-width:1180px) {
+  .imgs {
+    width: -webkit-fill-available;
+}
+}

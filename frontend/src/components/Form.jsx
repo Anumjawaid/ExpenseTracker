@@ -69,13 +69,13 @@ const FormField = (prop) => {
           <label style={{ color: "#8C84FA", marginTop: "20px", backgroundColor: 'black', fontSize: '20px' }}>Date</label><br />
           <input name='date' onChange={(e) => { mapUser(e) }} type="date" style={{ color: "#8C84FA", marginTop: "20px", width: "35%", background: "transparent", border: "2px solid #8C84FA", backgroundColor: 'black', width: '90%', height: "50px" }} value={exercise.date} ></input><br />
 
-          <button style={{ backgroundColor: "#8C84FA", border: "2px solid #8015E8", marginLeft: '120px', marginTop: "50px", marginBottom: "50px", padding: "10px", width: "40%", color: "white", borderRadius: "3px", fontWeight: "bold", fontSize: '20px', letterSpacing: "0.7px" }} onClick={() => add()}>Track</button>
+          <button style={{ backgroundColor: "#8C84FA", border: "2px solid #8015E8", marginLeft: '25%', marginTop: "50px", marginBottom: "50px", padding: "10px", width: "40%", color: "white", borderRadius: "3px", fontWeight: "bold", fontSize: '20px', letterSpacing: "0.7px" }} onClick={() => add()}>Track</button>
 
         </div></Col>
-        <Col style={{ backgroundColor: 'black', marginTop: '100px' }}>
+        <Col style={{ backgroundColor: 'black', marginTop: '15%' }}>
          <ToastEx/>
 
-          <img style={{ backgroundColor: 'black' }} src={image} />
+          <img className="imgs"style={{ backgroundColor: 'black' }} src={image} />
 
         </Col>
       </Row>
