@@ -8,6 +8,7 @@ import { InputFunction } from './helper';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import Toast from 'react-bootstrap/Toast';
+import {display} from '../Store/exercisereducer'
 
 
 
@@ -86,14 +87,16 @@ const FormField = (prop) => {
 export default FormField;
 
 function ToastEx(props){
-  const[display,setDisplay]=useState('none')
   const  response  = useSelector((state) => state.exercise.response)
-    // console.log(response,"response")
+  const  display1  = useSelector((state) => state.exercise.display)
+  let dispatch=useDispatch()
     let scrollItem=document.getElementById('1')
-    if(response.length != 0){
-      // console.log(response,"response not if")
+    if(display1=='block'){
       // setDisplay('block')
-      // scrollItem.scrollTo()
+      scrollItem.scrollIntoView()
+      setTimeout(()=>{
+       dispatch(display('none'))
+      },6000)
      
             
     }
@@ -101,7 +104,7 @@ function ToastEx(props){
 
     }
   return(
-    <Toast style={{ backgroundColor: 'black',display:display }} id='1'>
+    <Toast style={{ backgroundColor: 'black',display:display1 }} id='1'>
     <Toast.Header style={{ backgroundColor: 'black' }} >
       {/* <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" /> */}
       <strong className="me-auto" style={{ backgroundColor: 'black',color:'#C9C8FB',textTransform:'uppercase' }} >{response}</strong>
